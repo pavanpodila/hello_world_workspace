@@ -3,7 +3,7 @@ export PATH := "./node_modules/.bin:" + env_var('PATH')
 
 # Generate JSON serializables for features
 gen-feature_counter: (_generate-json "features/counter/feature_counter" "watch")
-gen-feature_blog_post: (_generate-json "apps/hello_world" "watch")
+gen-app_hello_world: (_generate-json "apps/hello_world" "watch")
 
 # Upgrade your Flutter and Dart packages
 upgrade_pub_packages:
