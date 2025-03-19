@@ -63,6 +63,7 @@ class _Product extends StatelessWidget {
 
   const _Product({required this.content});
 
+  @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 

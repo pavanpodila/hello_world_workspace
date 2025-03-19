@@ -5,7 +5,7 @@ import 'package:vyuh_feature_system/content/index.dart';
 part 'product.g.dart';
 
 @JsonSerializable(createToJson: false)
-final class Product {
+final class Product extends ContentItem {
   static const schemaName = 'ecommerce.product';
 
   final String title;
@@ -26,7 +26,9 @@ final class Product {
     this.slug,
     this.brand,
     this.category,
-  });
+    super.layout,
+    super.modifiers,
+  }) : super(schemaType: schemaName);
 
   factory Product.fromJson(Map<String, dynamic> json) =>
       _$ProductFromJson(json);

@@ -32,6 +32,8 @@ Product _$ProductFromJson(Map<String, dynamic> json) => Product(
       json['category'] == null
           ? null
           : Category.fromJson(json['category'] as Map<String, dynamic>),
+  layout: typeFromFirstOfListJson(json['layout']),
+  modifiers: ContentItem.modifierList(json['modifiers']),
 );
 
 Slug _$SlugFromJson(Map<String, dynamic> json) =>
